@@ -1,0 +1,7 @@
+/* Стили для навигационной панели */
+@media (max-width: 700px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
