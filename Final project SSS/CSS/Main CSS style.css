@@ -2,48 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #c71f1f;
 }
 
 header {
-    background-color: #333;
+    background-color: #e13b11;
     color: #fff;
     text-align: center;
     padding: 10px;
 }
 
-nav {
-    background-color: #555;
-    color: #fff;
-    padding: 10px;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px;
-    margin: 0 10px;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
 .btn:hover {
-    background-color: #333;
-}
-@media (max-width: 700px) {
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
+    background-color: #cf6005;
 }
