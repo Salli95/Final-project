@@ -1,10 +1,12 @@
 /* Стили для футера */
 footer {
-    background-color: #b01111;
+    background-color: #e03004;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: absolute;
+    padding: 2px;
+    position: fixed;
+    justify-content: space-between;
     bottom: 0;
     width: 100%;
+    border-radius:10px;
 }

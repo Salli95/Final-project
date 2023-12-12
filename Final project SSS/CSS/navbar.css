@@ -6,7 +6,23 @@
     }
 }
 nav-item.hover{
-    color: #b31b1b;
+    color: #d41212;
 
+
+}
+nav {
+    background-color: #37ae12;
+    color: #fff;
+    padding: 5px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+button.NavIcon{
+    color: #d41212;
 
 }

@@ -7,8 +7,11 @@
     <meta charset="UTF-8">
     
     <title>Electric guitar</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/оглавление.css">
     <link rel="stylesheet" type="text/css" href="../CSS/карточка.css">
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/navbar.css">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
@@ -17,13 +20,21 @@
         <h1>Garage Bend</h1>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark  color" >
         <a class="navbar-brand" href="../Html/Guitar.html">Garage Bend</a>
-        <!-- Кнопка бургера для мобильных устройств -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       
+        <button 
+        id="NavIcon"
+        class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Ссылки в навигационной панели -->
+        
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <!-- Ссылка "Главная" с активным состоянием -->
@@ -47,7 +58,7 @@
    
 
         <!-- Сетка карточек товаров -->
-        <div class="cards" style=" font-size: 3vh;">
+        <div class="cards" style="font-size: 3vh;">
             <!-- Карточка товара 1 -->
             <div class="card">
                 <!-- Карточка товара .. -->
@@ -290,17 +301,7 @@
     </div>
 </div>
 </div>
-
-</> <!-- Закрываем контейнер .cards --> 
-            
-
-
-
-        
-
-            
-            
-        </div>
+ </div>
     </div>
 </div>
 
@@ -308,11 +309,11 @@
 
 
 <footer >#Garage Bend © 2023 </footer>
+</div>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-
-
-        
-    </div>
 </body>
 </html>

@@ -1,15 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #c71f1f;
+    
 }
 
 header {
-    background-color: #e13b11;
-    color: #fff;
+   /*  background-color: #c3bb64; */
     text-align: center;
-    padding: 10px;
+   
 }
 
 .btn:hover {
