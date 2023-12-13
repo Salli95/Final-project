@@ -6,14 +6,13 @@
     }
 }
 nav-item.hover{
-    color: #d41212;
+    color: #d4ca12;
 
 
 }
 nav {
     background-color: #37ae12;
-    color: #fff;
-    padding: 5px;
+    
 }
 
 nav a {
@@ -22,7 +21,4 @@ nav a {
     padding: 10px;
     margin: 0 10px;
 }
-button.NavIcon{
-    color: #d41212;
 
-}
