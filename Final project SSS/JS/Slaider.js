@@ -1,21 +1,21 @@
-let slideIndex = 0;
+let slideIndex001 = 0;
 
-function showSlides() {
+function showSlides001() {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
+    let slides = document.getElementsByClassName("mySlides001");
     
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
 
-    slideIndex++;
+    slideIndex001++;
 
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
+    if (slideIndex001 > slides.length) {
+        slideIndex001 = 1;
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Интервал переключения слайдов (в миллисекундах)
+    slides[slideIndex001 - 1].style.display = "block";
+    setTimeout(showSlides001, 7000); // Интервал переключения слайдов (в миллисекундах)
 }
 
-showSlides();
+showSlides001();

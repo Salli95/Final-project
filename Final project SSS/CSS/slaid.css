@@ -1,45 +1,30 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.slideshow-container {
-  max-width: 1000px;
+.slideshow-container001 {
+  max-width: 700px;
   position: relative;
   margin: auto;
+  overflow: hidden; 
 }
 
-.mySlides {
+.mySlides001, .custom-slide001 {
   display: none;
+  height: 330px;
 }
 
 img {
   width: 100%;
+  border-radius: 40px ;
 }
-
-/* .prev, .next {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: black;
-  border: none;
-  cursor: pointer;
-} */
 
 .prev:hover, .next:hover {
-  background-color: #555;
+  background-color: #555 !important;
 }
 
-.fade {
-  animation: fade 1s ease-in;
+/* Замените fade на другое имя, например, myFade */
+.myFade001 {
+  animation: myFade 1s ease-in-out infinite;
 }
 
-@keyframes fade {
+@keyframes myFade {
   from { opacity: .4 }
   to { opacity: 1 }
 }
