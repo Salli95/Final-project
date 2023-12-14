@@ -52,9 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html/Welcom.html">Вход в систему</a>
-                    </li>
+                    
                     <li class="nav-item active">
                         <a class="nav-link" href="../Html/Main puge.html">Главная</a>
                     </li>
@@ -68,11 +66,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Ударные</a>
                     </li>
-                  
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Html/Basket.html">Basket</a>
+                    </li>
+                    
+                    
                 </ul>
             </div>
         </nav>
    
+        <div id="cartTotal" style="font-size: 20px; text-align: center; margin-top: 20px;">
+            Общая стоимость: $0.00
+        </div>
 
         <!-- Сетка карточек товаров -->
         <div class="cards" style="font-size: 3vh;">
@@ -328,9 +334,43 @@
 <footer > © Garage Bend 2023 </footer>
 </div>
 <script src="../JS/INT.js"></script>
+<!-- <script src="../JS/Basket.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+<script>
+    // Обработчики событий для кнопок "В корзину"
+    document.querySelectorAll('.card__add').forEach(button => {
+        button.addEventListener('click', function () {
+            // Получаем информацию о товаре из родительской карточки
+            const card = this.closest('.card');
+            const title = card.querySelector('.card__title').textContent;
+            const discountPrice = parseFloat(card.querySelector('.card__price--discount').textContent);
+            
+            // Вызываем функцию добавления товара в корзину из Basket.js
+            addToCart(title, discountPrice);
+        });
+    });
+    
+    // Обновляем элемент с общей стоимостью корзины
+    function updateCartTotalUI() {
+        const cartTotalElement = document.getElementById('cartTotal');
+        cartTotalElement.textContent = `Общая стоимость: $${shoppingCart.total.toFixed(2)}`;
+    }
+    
+    // Переопределяем метод обновления интерфейса корзины для учета нового элемента
+    shoppingCart.updateCartUI = function () {
+        // Вызываем стандартный метод обновления интерфейса корзины
+        // (можно добавить дополнительные действия, если нужно)
+        this.__proto__.updateCartUI.call(this);
+    
+        // Вызываем функцию обновления элемента с общей стоимостью корзины
+        updateCartTotalUI();
+    };
+    
+    // Вызываем функцию обновления элемента с общей стоимостью корзины при загрузке страницы
+    updateCartTotalUI();
+</script>
 </body>
 </html>

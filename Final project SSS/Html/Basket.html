@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: #e44d26;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Shopping Cart</h1>
+
+    <div id="cartItems"></div>
+
+    <div id="total" class="text-right font-weight-bold mt-4">Total: $0.00</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="INT.js"></script>
+<script>
+    // Обработчик события для кнопки "Добавить в корзину"
+    document.querySelectorAll('.card__add').forEach(button => {
+        button.addEventListener('click', function () {
+            // Получаем информацию о товаре из родительской карточки
+            const card = this.closest('.card');
+            const title = card.querySelector('.card__title').textContent;
+            const discountPrice = parseFloat(card.querySelector('.card__price--discount').textContent);
+
+            // Вызываем функцию добавления товара в корзину
+            addToCart(title, discountPrice);
+
+            // Вызываем функцию обновления интерфейса корзины
+            updateCartUI();
+        });
+    });
+</script>
+</body>
+</html>

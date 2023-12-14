@@ -149,10 +149,10 @@
     width: 100%;
     font-weight: 400;
     font-size: 17px;
-    color: #70c05b;
+    color: #3be311;
     padding: 10px;
     text-align: center;
-    border: 1px solid #70c05b;
+    border: 1px solid #e4b406;
     border-radius: 4px;
     cursor: pointer; /* Меняем курсор при наведении */
     transition: 0.5s;
@@ -161,7 +161,7 @@
   }
   
   .card__add:hover {
-    border: 7px solid #ff6633;
+    border: 2px solid #ff6633;
     background-color: #ff6633;
     color: #fff;
   }
