@@ -1,29 +1,27 @@
-function showLoginPopup() {
-    document.getElementById('loginPopup').style.display = 'block';
-}
+document.getElementById('openModalBtn').addEventListener('click', function () {
+    document.getElementById('myModal').style.display = 'block';
+});
 
-function closeLoginPopup() {
-    document.getElementById('loginPopup').style.display = 'none';
-}
+document.getElementById('closeModalBtn').addEventListener('click', function () {
+    document.getElementById('myModal').style.display = 'none';
+});
+
+window.onclick = function (event) {
+    var modal = document.getElementById('myModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
 
 function setWelcomeMessage() {
     const username = document.getElementById('username').value;
     if (username.trim() !== '') {
-        document.getElementById('welcomeMessage').textContent = `Добро пожаловать, ${username}!`;
-        localStorage.setItem('username', username); // сохраняем имя в localStorage
-        closeLoginPopup();
+        alert('Добро пожаловать, ' + username + '!');
+        document.getElementById('myModal').style.display = 'none';
+        
+        // Обновляем текст кнопки на "Hello"
+        document.getElementById('openModalBtn').textContent = 'Hello ' + username;
     } else {
         alert('Введите имя пользователя');
     }
 }
-
-// Функция, которая проверяет, есть ли имя пользователя в localStorage при загрузке страницы
-function checkUsername() {
-    const storedUsername = localStorage.getItem('username');
-    if (storedUsername) {
-        document.getElementById('welcomeMessage').textContent = `Добро пожаловать, ${storedUsername}!`;
-    }
-}
-
-// Вызываем функцию при загрузке страницы
-checkUsername();

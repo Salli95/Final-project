@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../CSS/Main CSS style.css">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/navbar.css">
-   <!--  <link rel="stylesheet" href="../CSS/cards.css"> -->
+    <link rel="stylesheet" href="../CSS/Mod win.css">
     <link rel="stylesheet" href="../CSS/slaid.css">
     <link rel="stylesheet" href="../CSS/оглавление.css">
    
@@ -26,9 +26,20 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark  color" >
         <a class="navbar-brand">Garage Bend</a>
-      
-        <button 
-        class="navbar-toggler" 
+    
+        <button id="openModalBtn">Открыть Модальное Окно</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="inner-container">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
+                    <input type="text" id="username" placeholder="Ваше имя">
+                    <button onclick="setWelcomeMessage()">Приветствовать</button>
+                </div>
+            </div>
+        </div>
+    <button class="navbar-toggler" 
         type="button" 
         data-toggle="collapse" 
         data-target="#navbarNav" 
@@ -91,7 +102,7 @@
     <footer>
         &copy; Garage Bend  2023 
     </footer>
-
+    <script src="../JS/INT.js"></script>
     <script src="../JS/Slaider.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
