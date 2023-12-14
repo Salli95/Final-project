@@ -18,10 +18,21 @@ function setWelcomeMessage() {
     if (username.trim() !== '') {
         alert('Добро пожаловать, ' + username + '!');
         document.getElementById('myModal').style.display = 'none';
-        
+
+        // Сохраняем имя пользователя в localStorage
+        localStorage.setItem('username', username);
+
         // Обновляем текст кнопки на "Hello"
         document.getElementById('openModalBtn').textContent = 'Hello ' + username;
     } else {
         alert('Введите имя пользователя');
     }
 }
+
+// При загрузке страницы проверяем, есть ли сохраненное имя в localStorage
+document.addEventListener('DOMContentLoaded', function () {
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+        document.getElementById('openModalBtn').textContent = 'Hello ' + storedUsername;
+    }
+});
