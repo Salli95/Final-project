@@ -68,7 +68,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html/Basket.html">Basket</a>
+                        <a class="nav-link" href="../Html/cart.html">Basket</a>
                     </li>
                     
                     
@@ -340,37 +340,48 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <script>
-    // Обработчики событий для кнопок "В корзину"
-    document.querySelectorAll('.card__add').forEach(button => {
+   // Используем JavaScript для добавления товаров в корзину
+
+    // Создаем объект корзины
+    const cart = [];
+
+    // Функция для добавления товара в корзину
+    function addToCart(itemName, price) {
+        const item = {
+            name: itemName,
+            price: price
+        };
+
+        // Добавляем товар в корзину
+        cart.push(item);
+
+        // Обновляем отображение корзины
+        updateCartDisplay();
+    }
+
+    // Функция для обновления отображения корзины
+    function updateCartDisplay() {
+        // Находим элемент, где будет отображаться корзина (предположим, это div с id "cartTotal")
+        const cartTotalElement = document.getElementById('cartTotal');
+
+        // Вычисляем общую стоимость товаров в корзине
+        const total = cart.reduce((acc, item) => acc + item.price, 0);
+
+        // Обновляем текст в элементе
+        cartTotalElement.textContent = `Общая стоимость: $${total.toFixed(2)}`;
+    }
+
+    // Добавляем обработчики клика на кнопки "В корзину"
+    const addToCartButtons = document.querySelectorAll('.card__add');
+    addToCartButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // Получаем информацию о товаре из родительской карточки
             const card = this.closest('.card');
-            const title = card.querySelector('.card__title').textContent;
-            const discountPrice = parseFloat(card.querySelector('.card__price--discount').textContent);
-            
-            // Вызываем функцию добавления товара в корзину из Basket.js
-            addToCart(title, discountPrice);
+            const itemName = card.querySelector('.card__title').textContent;
+            const price = parseFloat(card.querySelector('.card__price--discount').textContent);
+
+            addToCart(itemName, price);
         });
     });
-    
-    // Обновляем элемент с общей стоимостью корзины
-    function updateCartTotalUI() {
-        const cartTotalElement = document.getElementById('cartTotal');
-        cartTotalElement.textContent = `Общая стоимость: $${shoppingCart.total.toFixed(2)}`;
-    }
-    
-    // Переопределяем метод обновления интерфейса корзины для учета нового элемента
-    shoppingCart.updateCartUI = function () {
-        // Вызываем стандартный метод обновления интерфейса корзины
-        // (можно добавить дополнительные действия, если нужно)
-        this.__proto__.updateCartUI.call(this);
-    
-        // Вызываем функцию обновления элемента с общей стоимостью корзины
-        updateCartTotalUI();
-    };
-    
-    // Вызываем функцию обновления элемента с общей стоимостью корзины при загрузке страницы
-    updateCartTotalUI();
 </script>
 </body>
 </html>

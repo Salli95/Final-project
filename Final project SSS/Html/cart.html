@@ -60,21 +60,22 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="INT.js"></script>
 <script>
-    // Обработчик события для кнопки "Добавить в корзину"
-    document.querySelectorAll('.card__add').forEach(button => {
-        button.addEventListener('click', function () {
-            // Получаем информацию о товаре из родительской карточки
-            const card = this.closest('.card');
-            const title = card.querySelector('.card__title').textContent;
-            const discountPrice = parseFloat(card.querySelector('.card__price--discount').textContent);
+    // Переменные для отображения корзины
+    const cartItemsElement = document.getElementById('cartItems');
+    const cartTotalElement = document.getElementById('cartTotal');
 
-            // Вызываем функцию добавления товара в корзину
-            addToCart(title, discountPrice);
+    // Обновление отображения корзины
+    function updateCartDisplay() {
+        // Вычисляем общую стоимость товаров в корзине
+        const total = cart.reduce((acc, item) => acc + item.price, 0);
 
-            // Вызываем функцию обновления интерфейса корзины
-            updateCartUI();
-        });
-    });
+        // Обновляем отображение каждого товара в корзине
+        cartItemsElement.innerHTML = cart.map(item => `<li>${item.name} - $${item.price.toFixed(2)}</li>`).join('');
+
+        // Обновляем общую стоимость товаров в корзине
+        cartTotalElement.textContent = `Общая стоимость: $${total.toFixed(2)}`;
+    }
+
 </script>
 </body>
 </html>
