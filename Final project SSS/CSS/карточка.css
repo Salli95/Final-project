@@ -9,26 +9,28 @@
     min-height: 370px;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    flex-direction: column; /* Размещаем элементы в колонку */
+    flex-direction: column; 
     border-radius: 15px;
     transition: 0.2s;
     position: relative;
-    margin: 0 auto; /* Центрируем карточку по горизонтали */
+    margin: 0 auto; 
   }
   
   .cards {
     display: grid;
-    /* Автоматически заполняем на всю ширину grid-контейнера */
-    grid-template-columns: repeat(auto-fill, 225px);
-    width: 100%;
-    max-width: 95%; /* Ширина grid-контейнера */
-    justify-content: center;
-    justify-items: center; /* Размещаем карточку по центру */
-    column-gap: 30px; /* Отступ между колонками */
-    row-gap: 50px; /* Отступ между рядами */
-    margin: 0 auto;
+  /* grid-template-columns: repeat(auto-fill, minmax(370px, 2fr)); */
+  gap: 30px;
+  justify-content: center;
+  max-width: 95%;
+  margin: 0 auto;
     
   }
+  @media screen and (max-width: 600px) {
+    .cards {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
 
   /* При наведении на карточку - меняем цвет тени */
   .card:hover {
