@@ -18,19 +18,33 @@
   
   .cards {
     display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(370px, 2fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 30px;
   justify-content: center;
   max-width: 95%;
   margin: 0 auto;
     
   }
-  @media screen and (max-width: 600px) {
-    .cards {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  @media only screen and (max-width: 767px) {
+    .card {
+        width: 90%; /* Уменьшаем ширину карточки на мобильных устройствах */
+        font-size: 14px; /* Уменьшаем размер шрифта на мобильных устройствах */
     }
-  }
-  
+
+    .cards {
+        gap: 15px; /* Увеличиваем отступ между карточками на мобильных устройствах */
+    }
+
+    .card__prices {
+        flex: 100%; /* Размещаем цены на всю ширину карточки на мобильных устройствах */
+        margin-top: 10px; /* Увеличиваем отступ между ценами и названием товара на мобильных устройствах */
+    }
+
+    .card__add {
+        font-size: 16px; /* Уменьшаем размер шрифта кнопки "В корзину" на мобильных устройствах */
+    }
+}
+
 
   /* При наведении на карточку - меняем цвет тени */
   .card:hover {

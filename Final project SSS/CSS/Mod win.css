@@ -1,3 +1,14 @@
+@media only screen and (max-width: 767px) {
+  .modal-content {
+    width: 80%; /* Увеличиваем ширину модального окна на мобильных устройствах */
+  }
+
+  /* Дополнительные стили для модального окна на мобильных устройствах */
+  .modal-content {
+    padding: 20px;
+  }
+
+}
 .modal {
   display: none;
   position: fixed;
