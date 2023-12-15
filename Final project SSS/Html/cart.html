@@ -46,7 +46,7 @@
     </style>
 </head>
 <body>
-
+    <button id="clearCartBtn" class="btn btn-danger">Очистить корзину</button>
 <div class="container">
     <h1>Shopping Cart</h1>
 
@@ -88,6 +88,21 @@
  
      // Обновляем отображение корзины при загрузке страницы
      updateCartDisplay();
+
+      // Добавляем обработчик клика на кнопку "Очистить корзину"
+    const clearCartBtn = document.getElementById('clearCartBtn');
+    if (clearCartBtn) {
+        clearCartBtn.addEventListener('click', function () {
+            // Очищаем корзину в localStorage
+            localStorage.removeItem('cart');
+
+            // Очищаем массив корзины
+            cart.length = 0;
+
+            // Обновляем отображение корзины
+            updateCartDisplay();
+        });
+    }
 </script>
 </body>
 </html>

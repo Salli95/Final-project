@@ -1,7 +1,7 @@
    // Используем JavaScript для добавления товаров в корзину
 
     // Создаем объект корзины
-    const cart = [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Функция для добавления товара в корзину
     function addToCart(itemName, price) {
@@ -12,6 +12,9 @@
 
         // Добавляем товар в корзину
         cart.push(item);
+
+        // Сохраняем корзину в localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
 
         // Обновляем отображение корзины
         updateCartDisplay();
@@ -39,4 +42,20 @@
 
             addToCart(itemName, price);
         });
+    });
+
+    // Обновляем отображение корзины при загрузке страницы
+    updateCartDisplay();
+
+
+    const clearCartBtn = document.getElementById('clearCartBtn');
+    clearCartBtn.addEventListener('click', function () {
+        // Очищаем корзину в localStorage
+        localStorage.removeItem('cart');
+
+        // Очищаем массив корзины
+        cart.length = 0;
+
+        // Обновляем отображение корзины
+        updateCartDisplay();
     });
