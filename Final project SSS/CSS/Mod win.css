@@ -55,7 +55,7 @@
 
 
 
-#openModalBtn {
+#openModalBtn,#openHistoryModalBtn{
   background-color: #d63609; /* Основной цвет кнопки */
   color: #fff;
   padding: 10px 20px;
@@ -64,6 +64,13 @@
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+#openHistoryModalBtn:hover {
+  background-color: #ce7807; /* Цвет кнопки при наведении, близкий к основному цвету */
+  color: #fff;
 }
 
 #openModalBtn:hover {

@@ -9,7 +9,7 @@
    
   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+ 
    
      <link rel="stylesheet" type="text/css" href="../CSS/Mod win.css">
      <link rel="stylesheet" type="text/css" href="../CSS/Main CSS style.css">
@@ -56,7 +56,21 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     
-                    
+                    <button id="openHistoryModalBtn">History</button>
+
+                    <!-- Модальное окно для истории -->
+                    <div id="historyModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" id="closeHistoryModalBtn">&times;</span>
+                            <h2>История</h2>
+                            <ul>
+                                <!-- Здесь будут ссылки на историю -->
+                                <li><a href="#">Ссылка 1</a></li>
+                                <li><a href="#">Ссылка 2</a></li>
+                                <li><a href="#">Ссылка 3</a></li>
+                            </ul>
+                        </div>
+                    </div>
                     <li class="nav-item active">
                         <a class="nav-link" href="../Html/Main puge.html">Главная</a>
                     </li>
@@ -72,7 +86,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../Html/cart.html">Basket</a>
+                        <a class="nav-link" href="../Html/Basket.html">Basket</a>
                     </li>
                     
                     <button id="clearCartBtn" class="btn btn-danger">Очистить корзину</button>
@@ -337,10 +351,12 @@
 
 <footer > © Garage Bend 2023 </footer>
 </div>
-<script src="../JS/INT.js"></script>
+<script src="../JS/Hello.js"></script>
+<script src="../JS/History.js"></script>
 <script src="../JS/Basket.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </body>
 </html>
