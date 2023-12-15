@@ -1,14 +1,4 @@
-@media only screen and (max-width: 767px) {
-  .modal-content {
-    width: 80%; /* Увеличиваем ширину модального окна на мобильных устройствах */
-  }
-
-  /* Дополнительные стили для модального окна на мобильных устройствах */
-  .modal-content {
-    padding: 20px;
-  }
-
-}
+/* Общие стили для модального окна */
 .modal {
   display: none;
   position: fixed;
@@ -21,18 +11,27 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Основные стили для модального контейнера */
 .modal-content {
-  background-color: #d85310; 
-  margin: 25% auto;
-  padding: 40px;
-  border: 2px solid #5ec230; 
-  width: 30%;
-  color: #fff; 
+  background-color: #d85310;
+  padding: 20px; /* Уменьшаем внутренние отступы */
+  border: 2px solid #5ec230;
+  width: 70%; /* Увеличиваем ширину */
+  color: #fff;
   border-radius: 10px;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Стили для модального окна на мобильных устройствах */
+@media only screen and (max-width: 767px) {
+  .modal-content {
+    width: 90%;
+  }
+}
 .close {
   color: #f50b0b; 
   float: right;
@@ -49,6 +48,12 @@
   color: #e74c3c; 
   text-decoration: none;
 }
+ input {
+    width: calc(100% - 20px); /* Ширина строки ввода с учетом внутренних отступов */
+    margin-bottom: 15px;
+  }
+
+
 
 #openModalBtn {
   background-color: #d63609; /* Основной цвет кнопки */
