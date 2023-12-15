@@ -13,5 +13,16 @@ header {
 
 
 .btn:hover {
-    background-color: #cf6005;
+    background-color: #ad05cf;
+}
+
+
+.btn-danger {
+    background-color: #f85605; 
+    color: #fff;
+    border-radius: 15px;
+}
+
+.btn-danger:hover {
+    background-color: #c93e08;
 }
