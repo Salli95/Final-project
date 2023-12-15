@@ -50,9 +50,9 @@
 <div class="container">
     <h1>Shopping Cart</h1>
 
-    <div id="cartItems"></div>
+    <ul id="cartItems"></ul>
 
-    <div id="total" class="text-right font-weight-bold mt-4">Total: $0.00</div>
+    <div id="cartTotal" class="text-right font-weight-bold mt-4">Total: $0.00</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -60,22 +60,34 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="INT.js"></script>
 <script>
-    // Переменные для отображения корзины
-    const cartItemsElement = document.getElementById('cartItems');
-    const cartTotalElement = document.getElementById('cartTotal');
+     // Получаем корзину из localStorage
+     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Обновление отображения корзины
-    function updateCartDisplay() {
-        // Вычисляем общую стоимость товаров в корзине
-        const total = cart.reduce((acc, item) => acc + item.price, 0);
-
-        // Обновляем отображение каждого товара в корзине
-        cartItemsElement.innerHTML = cart.map(item => `<li>${item.name} - $${item.price.toFixed(2)}</li>`).join('');
-
-        // Обновляем общую стоимость товаров в корзине
-        cartTotalElement.textContent = `Общая стоимость: $${total.toFixed(2)}`;
-    }
-
+     // Находим элементы для отображения корзины
+     const cartItemsElement = document.getElementById('cartItems');
+     const cartTotalElement = document.getElementById('cartTotal');
+ 
+     // Обновляем отображение корзины
+     function updateCartDisplay() {
+         // Вычисляем общую стоимость товаров в корзине
+         const total = cart.reduce((acc, item) => acc + item.price, 0);
+ 
+         // Обновляем текст в элементах
+         cartTotalElement.textContent = `Общая стоимость: $${total.toFixed(2)}`;
+ 
+         // Очищаем отображение товаров в корзине
+         cartItemsElement.innerHTML = '';
+ 
+         // Обновляем отображение каждого товара в корзине
+         cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItemsElement.appendChild(li);
+         });
+     }
+ 
+     // Обновляем отображение корзины при загрузке страницы
+     updateCartDisplay();
 </script>
 </body>
 </html>

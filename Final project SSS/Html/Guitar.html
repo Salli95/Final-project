@@ -339,11 +339,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-<script>
+<script>  
+  
    // Используем JavaScript для добавления товаров в корзину
 
     // Создаем объект корзины
-    const cart = [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Функция для добавления товара в корзину
     function addToCart(itemName, price) {
@@ -354,6 +355,9 @@
 
         // Добавляем товар в корзину
         cart.push(item);
+
+        // Сохраняем корзину в localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
 
         // Обновляем отображение корзины
         updateCartDisplay();
@@ -382,6 +386,11 @@
             addToCart(itemName, price);
         });
     });
+
+    // Обновляем отображение корзины при загрузке страницы
+    updateCartDisplay();
+</script>
+
 </script>
 </body>
 </html>
