@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Электрогитар</title>
+    
+    <link rel="stylesheet" href="../CSS/navbar.css">
+
+
+    <link rel="stylesheet" href="../CSS/оглавление.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Main CSS style.css">
+    <link rel="stylesheet" href="../CSS/Mod win.css">
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (min-width: 768px) {
+            .image-container img {
+                width: 48%;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .image-container img {
+                width: 30%;
+            }
+        }
+    </style>
+   
+</head>
+
+<body>
+
+    <header>
+        <div class="five">
+            <h1>Garage Bend</h1>
+        </div>
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  color">
+        <a class="navbar-brand">Electric guitar</a>
+
+        <button id="openModalBtn">Hello</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="inner-container">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
+                    <input type="text" id="username" placeholder="Ваше имя">
+                    <p>Password</p>
+                    <input type="password" />
+                    <button onclick="setWelcomeMessage()">Hi</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+                <button id="openHistoryModalBtn">History</button>
+
+                <!-- Модальное окно для истории -->
+                <div id="historyModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeHistoryModalBtn">&times;</span>
+                        <h2>История музыкальных инструментов</h2>
+                        <ul>
+                            <!-- Здесь будут ссылки на историю -->
+                            <li><a href="../Html/HistoryGitars.html">Электрогитары</a></li>
+                            <li><a href="#">Барабыны</a></li>
+                            <li><a href="#">Пиано</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Html/Main puge.html">Главная</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Клавишные</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ударные</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Basket.html">Basket</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>Появление электрогитар</h2>
+            <p>Электрогитары стали популярными в середине XX века благодаря своей способности создавать электрический
+                звук и изменять его с помощью различных эффектов.</p>
+        </section>
+
+        <section>
+            <h2>Эволюция дизайна</h2>
+            <p>С течением времени дизайн электрогитар претерпевал множество изменений. От классических форм до
+                современных инновационных решений.</p>
+            <div class="image-container">
+                <img src="../Медиа/Ассоримент/Гит/evh.png" alt="Электрогитара 1">
+                <img src="../Медиа/Ассоримент/Гит/страт.jpg" alt="Электрогитара 2">
+                <img src="../Медиа/Ассоримент/Гит/супер стpng.png" alt="Электрогитара 3">
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; Garage Bend 2023
+    </footer>
+    <script src="../JS/Hello.js"></script>
+    <script src="../JS/Slaider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../JS/History.js"></script>
+</body>
+</body>
+
+</html>
