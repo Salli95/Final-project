@@ -27,74 +27,75 @@
 </header>
 
     
-        <nav class="navbar navbar-expand-lg navbar-dark  color" >
-            <a class="navbar-brand">Electric guitar</a>
-        
-            <button id="openModalBtn">Hello</button>
+       
+    <nav class="navbar navbar-expand-lg navbar-dark  color" >
+        <a class="navbar-brand">Electric guitar</a>
     
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <div class="inner-container">
-                        <span class="close" id="closeModalBtn">&times;</span>
-                        <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
-                        <input type="text" id="username" placeholder="Ваше имя">
-                        <p>Password</p>
-                        <input type="password"/>
-                        <button onclick="setWelcomeMessage()">Hi</button>
-                    </div>
+        <button id="openModalBtn">Hello</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="inner-container">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
+                    <input type="text" id="username" placeholder="Ваше имя">
+                    <p>Password</p>
+                    <input type="password"/>
+                    <button onclick="setWelcomeMessage()">Hi</button>
                 </div>
             </div>
-           
-        <button class="navbar-toggler" 
-            type="button" 
-            data-toggle="collapse" 
-            data-target="#navbarNav" 
-            aria-controls="navbarNav" 
-            aria-expanded="false" 
-            aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    
-                    <button id="openHistoryModalBtn">History</button>
+        </div>
+       
+    <button class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <button id="openHistoryModalBtn">History</button>
 
-                    <!-- Модальное окно для истории -->
-                    <div id="historyModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close" id="closeHistoryModalBtn">&times;</span>
-                            <h2>История музыкальных инструментов</h2>
-                            <ul>
-                                <!-- Здесь будут ссылки на историю -->
-                                <li><a href="../Html/HistoryGitars.html">Электрогитары</a></li>
-                                <li><a href="#">Барабыны</a></li>
-                                <li><a href="#">Пиано</a></li>
-                            </ul>
-                        </div>
+                <!-- Модальное окно для истории -->
+                <div id="historyModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeHistoryModalBtn">&times;</span>
+                        <h2>История</h2>
+                        <ul>
+                            <!-- Здесь будут ссылки на историю -->
+                            <li><a href="#">Ссылка 1</a></li>
+                            <li><a href="#">Ссылка 2</a></li>
+                            <li><a href="#">Ссылка 3</a></li>
+                        </ul>
                     </div>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../Html/Main puge.html">Главная</a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Клавишные</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ударные</a>
-                    </li>
+                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Html/Main puge.html">Главная</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Клавишные</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Accessorie.html">электроника</a>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Html/Basket.html">Basket</a>
-                    </li>
-                    
-                   
-                </ul>
-            </div>
-        </nav>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Basket.html">Basket</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </nav>
    
         <div id="cartTotal" style="font-size: 20px; text-align: center; margin-top: 20px;">
             Общая стоимость: $0.00

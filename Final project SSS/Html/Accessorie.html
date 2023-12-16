@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Electric guitar</title>
+   
+   
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ 
+   
+     <link rel="stylesheet" type="text/css" href="../CSS/Mod win.css">
+     <link rel="stylesheet" type="text/css" href="../CSS/Main CSS style.css">
+     <link rel="stylesheet" type="text/css" href="../CSS/карточка.css">
+     <link rel="stylesheet" type="text/css" href="../CSS/оглавление.css">
+     <link rel="stylesheet" type="text/css" href="../CSS/navbar.css">
+     
+</head>
+<body>
+
+<header>
+    <div class="five">
+        <h1>Garage Bend</h1>
+    </div>
+</header>
+
+    
+      
+    <nav class="navbar navbar-expand-lg navbar-dark  color" >
+        <a class="navbar-brand">Electric guitar</a>
+    
+        <button id="openModalBtn">Hello</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="inner-container">
+                    <span class="close" id="closeModalBtn">&times;</span>
+                    <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
+                    <input type="text" id="username" placeholder="Ваше имя">
+                    <p>Password</p>
+                    <input type="password"/>
+                    <button onclick="setWelcomeMessage()">Hi</button>
+                </div>
+            </div>
+        </div>
+       
+    <button class="navbar-toggler" 
+        type="button" 
+        data-toggle="collapse" 
+        data-target="#navbarNav" 
+        aria-controls="navbarNav" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                
+                <button id="openHistoryModalBtn">History</button>
+
+                <!-- Модальное окно для истории -->
+                <div id="historyModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeHistoryModalBtn">&times;</span>
+                        <h2>История</h2>
+                        <ul>
+                            <!-- Здесь будут ссылки на историю -->
+                            <li><a href="#">Ссылка 1</a></li>
+                            <li><a href="#">Ссылка 2</a></li>
+                            <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Html/Main puge.html">Главная</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Клавишные</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Accessorie.html">электроника</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Basket.html">Basket</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </nav>
+   
+   
+        <div id="cartTotal" style="font-size: 20px; text-align: center; margin-top: 20px;">
+            Общая стоимость: $0.00
+        </div>
+
+
+<!-- Сетка карточек товаров -->
+<div class="cards" style=" font-size: 3vh;">
+    <!-- Карточка товара 1 -->
+    <div class="card">
+        <!-- Карточка товара .. -->
+        <div class="card__top">
+            <!-- Изображение-ссылка товара -->
+            <a href="https://bangbang.kz/aksessuary/pyupitr-orkestroviy-stagg-mus-c5-tp-00000001191/" class="card__image">
+                <img
+                    src="../Медиа/Ассоримент/аксесы/pyupitr-orkestrovyy-ever-green-egc-013-600x600-2258_jpg.webp"
+                    alt="sorry"
+                />
+            </a>
+            <!-- Скидка на товар -->
+            <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+            <!-- Цены на товар (с учетом скидки и без)-->
+            <div class="card__prices">
+                <div class="card__price card__price--discount">30</div>
+                <div class="card__price card__price--common">35</div>
+            </div>
+            <!-- Ссылка-название товара -->
+            <a href="https://bangbang.kz/aksessuary/pyupitr-orkestroviy-stagg-mus-c5-tp-00000001191/" class="card__title">
+                Пюпитр 
+            </a>
+            <!-- Кнопка добавить в корзину -->
+            <button class="card__add">В корзину</button>
+        </div>
+    </div>
+
+    <!-- Карточка товара 2 -->
+    <div class="card">
+        <!-- Карточка товара .. -->
+        <div class="card__top">
+            <!-- Изображение-ссылка товара -->
+            <a href="https://music-room.kz/p98209676-kabel-instrumentalnyj-kaysen.html" class="card__image">
+                <img
+                    src="../Медиа/Ассоримент/аксесы/180814006_kabel-instrumentalnyj-kaysen.webp "alt="sorry"
+                />
+            </a>
+            <!-- Скидка на товар -->
+            <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+            <!-- Цены на товар (с учетом скидки и без)-->
+            <div class="card__prices">
+                <div class="card__price card__price--discount">40 </div>
+                <div class="card__price card__price--common">42</div>
+            </div>
+            <!-- Ссылка-название товара -->
+            <a href="https://music-room.kz/p98209676-kabel-instrumentalnyj-kaysen.html" class="card__title">
+               Kaysen RC-С, 3 метра
+            </a>
+            <!-- Кнопка добавить в корзину -->
+            <button class="card__add">В корзину</button>
+        </div>
+    </div>
+
+
+    
+<!-- Карточка товара 3 -->
+<div class="card">
+        <!-- Карточка товара .. -->
+ <div class="card__top">
+            <!-- Изображение-ссылка товара -->
+            <a href="https://music-room.kz/p101605688-mediatr-smiger-a10.html" class="card__image">
+                <img
+                    src="../Медиа/Ассоримент/аксесы/187620837_mediatr-smiger-pk-a10.webp"
+                    alt="sorry"
+                />
+            </a>
+            <!-- Скидка на товар -->
+            <div class="card__label">-10%</div>
+        </div>
+        <!-- Нижняя часть -->
+        <div class="card__bottom">
+            <!-- Цены на товар (с учетом скидки и без)-->
+            <div class="card__prices">
+                <div class="card__price card__price--discount">15 </div>
+                <div class="card__price card__price--common">19</div>
+            </div>
+            <!-- Ссылка-название товара -->
+            <a href="https://music-room.kz/p101605688-mediatr-smiger-a10.html" class="card__title">
+                SJ-200 Studio Walnut
+            </a>
+            <!-- Кнопка добавить в корзину -->
+            <button class="card__add">В корзину</button>
+        </div>
+    </div>
+<!-- Карточка товара 4 -->
+<div class="card">
+<!-- Карточка товара .. -->
+<div class="card__top">
+<!-- Изображение-ссылка товара -->
+<a href="https://music-room.kz/p102749394-kapodastr-dlya-gitary.html" class="card__image">
+    <img
+        src="../Медиа/Ассоримент/аксесы/189534535_kapodastr-dlya-gitary.webp"
+        alt="sorry"
+    />
+</a>
+<!-- Скидка на товар -->
+<div class="card__label">-10%</div>
+</div>
+<!-- Нижняя часть -->
+<div class="card__bottom">
+<!-- Цены на товар (с учетом скидки и без)-->
+<div class="card__prices">
+    <div class="card__price card__price--discount">5 </div>
+    <div class="card__price card__price--common">8</div>
+</div>
+<!-- Ссылка-название товара -->
+<a href="https://images.ctfassets.net/m8onsx4mm13s/7FxUjQfCJTheqYsF7GwDdg/b74d3269198fc6750e606bf8150a8b0a/MCSSHSRSRB_front.png?w=1200&h=1200" class="card__title">
+    Каподастр
+
+</a>
+<!-- Кнопка добавить в корзину -->
+<button class="card__add">В корзину</button>
+</div>
+</div>
+
+<!-- Карточка товара 5 -->
+<div class="card">
+<!-- Карточка товара .. -->
+<div class="card__top">
+<!-- Изображение-ссылка товара -->
+<a href="https://www.1music.kz/product/usb-mikrofon-maono-pd100u/" class="card__image">
+    <img
+        src="../Медиа/Ассоримент/аксесы/qziq39ud0drznsbqt3opg5rv5rgkbhwq.jpeg"
+        alt="sorry"
+    />
+</a>
+<!-- Скидка на товар -->
+<!--     <div class="card__label">-10%</div> -->
+</div>
+<!-- Нижняя часть -->
+<div class="card__bottom">
+<!-- Цены на товар (с учетом скидки и без)-->
+<div class="card__prices">
+    <!-- <div class="card__price card__price--discount">9600 </div> -->
+    <div class="card__price card__price--common">300</div>
+</div>
+<!-- Ссылка-название товара -->
+<a href="https://www.1music.kz/product/usb-mikrofon-maono-pd100u/" class="card__title">
+    Maono PD100U
+</a>
+<!-- Кнопка добавить в корзину -->
+<button class="card__add">В корзину</button>
+</div>
+</div>
+
+<!-- Карточка товара 6 -->
+<div class="card">
+<!-- Карточка товара .. -->
+<div class="card__top">
+<!-- Изображение-ссылка товара -->
+<a href="https://yam.kz/images/detailed/18/M-Track-Solo-Side-Top.png" class="card__image">
+    <img
+        src="../Медиа/Ассоримент/аксесы/M-Track-Solo-Side-Top.png"
+        alt="sorry"
+    />
+</a>
+<!-- Скидка на товар -->
+<div class="card__label">-10%</div>
+</div>
+<!-- Нижняя часть -->
+<div class="card__bottom">
+<!-- Цены на товар (с учетом скидки и без)-->
+<div class="card__prices">
+    <div class="card__price card__price--discount">100</div>
+    <div class="card__price card__price--common">120</div>
+</div>
+<!-- Ссылка-название товара -->
+<a href="https://yam.kz/images/detailed/18/M-Track-Solo-Side-Top.png" class="card__title">
+    M-AUDIO M-TRACK 
+</a>
+<!-- Кнопка добавить в корзину -->
+<button class="card__add">В корзину</button>
+</div>
+</div>
+
+<!-- Карточка товара 7 -->
+<div class="card">
+<!-- Карточка товара .. -->
+<div class="card__top">
+<!-- Изображение-ссылка товара -->
+<a href="https://yam.kz/naushniki-i-garnitury/studiynye-monitornye/dt-990-pro-250/" class="card__image">
+    <img
+        src="../Медиа/Ассоримент/аксесы/pic_dt-990-pro_13-01_perspective_v1-webartikel.png"
+        alt="sorry"
+    />
+</a>
+<!-- Скидка на товар -->
+<div class="card__label">-10%</div>
+</div>
+<!-- Нижняя часть -->
+<div class="card__bottom">
+<!-- Цены на товар (с учетом скидки и без)-->
+<div class="card__prices">
+    <div class="card__price card__price--discount">130</div>
+    <div class="card__price card__price--common">150</div>
+</div>
+<!-- Ссылка-название товара -->
+<a href="https://yam.kz/naushniki-i-garnitury/studiynye-monitornye/dt-990-pro-250/" class="card__title">
+    BEYERDYNAMIC DT 990 PRO
+</a>
+<!-- Кнопка добавить в корзину -->
+<button class="card__add">В корзину</button>
+</div>
+</div>
+
+
+<!-- Карточка товара 8 -->
+<div class="card">
+<!-- Карточка товара .. -->
+<div class="card__top">
+<!-- Изображение-ссылка товара -->
+<a href="https://yam.kz/klavishnye-instrumenty/midi-klaviatury-i-kontrollery/mpk-mini-3-black/" class="card__image">
+    <img
+        src="../Медиа/Ассоримент/аксесы/mpk-mini-mk3-black-hd-171264.png"
+        alt="sorry"
+    />
+</a>
+<!-- Скидка на товар -->
+<div class="card__label">-10%</div>
+</div>
+<!-- Нижняя часть -->
+<div class="card__bottom">
+<!-- Цены на товар (с учетом скидки и без)-->
+<div class="card__prices">
+    <div class="card__price card__price--discount">5000 </div>
+    <div class="card__price card__price--common">6500</div>
+</div>
+<!-- Ссылка-название товара -->
+<a href="https://yam.kz/klavishnye-instrumenty/midi-klaviatury-i-kontrollery/mpk-mini-3-black/" class="card__title">
+    AKAI MPK MINI 3 BLACK 
+</a>
+<!-- Кнопка добавить в корзину -->
+<button class="card__add">В корзину</button>
+</div>
+</div>
+
+
+</div> 
+
+
+
+<footer > © Garage Bend 2023 </footer>
+</div>
+<script src="../JS/Hello.js"></script>
+<script src="../JS/History.js"></script>
+<script src="../JS/Basket.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
