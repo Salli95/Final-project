@@ -66,12 +66,14 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <div class="inner-container">
-                    <span class="close" id="closeModalBtn">&times;</span>
+                    <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
                     <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
                     <input type="text" id="username" placeholder="Ваше имя">
                     <p>Password</p>
-                    <input type="password"/>
+        
+                    <input type="password" id="password" />
                     <button onclick="setWelcomeMessage()">Hi</button>
+                    <button onclick="logout()">Выход</button>
                 </div>
             </div>
         </div>
@@ -98,7 +100,7 @@
                         <h2>История</h2>
                         <ul>
                             <!-- Здесь будут ссылки на историю -->
-                            <li><a href="#">Ссылка 1</a></li>
+                            <li><a href="../Html/HistoryGitars.html">Электрогитары</a></li
                             <li><a href="#">Ссылка 2</a></li>
                             <li><a href="#">Ссылка 3</a></li>
                         </ul>

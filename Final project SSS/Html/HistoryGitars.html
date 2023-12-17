@@ -104,16 +104,18 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <div class="inner-container">
-                    <span class="close" id="closeModalBtn">&times;</span>
+                    <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
                     <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
                     <input type="text" id="username" placeholder="Ваше имя">
                     <p>Password</p>
-                    <input type="password" />
+        
+                    <input type="password" id="password" />
                     <button onclick="setWelcomeMessage()">Hi</button>
+                    <button onclick="logout()">Выход</button>
                 </div>
             </div>
         </div>
-
+       
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

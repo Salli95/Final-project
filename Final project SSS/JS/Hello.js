@@ -37,4 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+}
 
+function logout() {
+    var usernameInput = document.getElementById("username");
+    var passwordInput = document.getElementById("password");
+
+    if (!usernameInput || !passwordInput) {
+        console.error("Элемент с id 'username' или 'password' не найден");
+        return;
+    }
+
+    usernameInput.value = ""; // Очищаем поле с именем при выходе
+    passwordInput.value = ""; // Очищаем поле с паролем при выходе
+    closeModal(); // Закрываем модальное окно после выхода
+    alert("Вы успешно вышли из системы!");
+
+    // Удаляем имя пользователя из localStorage
+    localStorage.removeItem('username');
+
+    // Обновляем текст кнопки на "Hello"
+    document.getElementById('openModalBtn').textContent = 'Hello';
+}
