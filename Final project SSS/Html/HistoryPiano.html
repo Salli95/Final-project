@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Электрогитар</title>
+    
+    <link rel="stylesheet" href="../CSS/navbar.css">
+
+
+    <link rel="stylesheet" href="../CSS/оглавление.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/Main CSS style.css">
+    <link rel="stylesheet" href="../CSS/Mod win.css">
+
+    <style>
+        .container {
+            
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+       
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (min-width: 768px) {
+            .image-container img {
+                width: 58%;
+            }
+            .vidos iframe {
+                width: 40%; 
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .image-container img {
+                width: 50%;
+            }
+            .vidos iframe {
+                width: 50%; 
+            }
+        }
+
+        
+.vidos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.vidos iframe {
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+section table {
+    margin: 0 auto; /* Центрирование таблицы по горизонтали */
+    width: 80%; /* Ширина таблицы */
+    border-collapse: collapse; /* Сворачивание границ таблицы */
+}
+
+th, td {
+    padding: 10px; /* Поля вокруг содержимого ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+}
+tbody tr:hover {
+    background-color: #ce7705; /* Цвет фона при наведении на строку */
+}
+
+    </style>
+   
+</head>
+
+<body>
+
+    <header>
+        <div class="five">
+            <h1>Garage Bend</h1>
+        </div>
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark  color">
+        <a class="navbar-brand">Electric guitar</a>
+
+        <button id="openModalBtn">Hello</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="inner-container">
+                    <span class="close" id="closeModalBtn" onclick="closeModal()">&times;</span>
+                    <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
+                    <input type="text" id="username" placeholder="Ваше имя">
+                    <p>Password</p>
+        
+                    <input type="password" id="password" />
+                    <button onclick="setWelcomeMessage()">Hi</button>
+                    <button onclick="logout()">Выход</button>
+                </div>
+            </div>
+        </div>
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+
+                <button id="openHistoryModalBtn">History</button>
+
+                <!-- Модальное окно для истории -->
+                <div id="historyModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="closeHistoryModalBtn">&times;</span>
+                        <h2>История музыкальных инструментов</h2>
+                        <ul>
+                            <!-- Здесь будут ссылки на историю -->
+                            <li><a href="../Html/HistoryGitars.html">Электрогитары</a></li>
+                            <li><a href="#">Барабыны</a></li>
+                            <li><a href="#">Пиано</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Html/Main puge.html">Главная</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Piano.html">Клавишные</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Accessorie.html">электроника</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../Html/Basket.html">Basket</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Первый раздел: Появление электрогитар -->
+        <h2>История пианино</h2>
+        <p>Пианино - это удивительный музыкальный инструмент, который впервые появился в начале XVIII века благодаря итальянскому мастеру Бартоломео Кристофори. 
+            Он создал инструмент, который сочетал в себе возможности клавесина и гармония фортепиано, что сразу же привлекло внимание музыкантов того времени.</p>
+        
+        <p>Первое пианино имело простую конструкцию с клавишами, молоточками и струнами, натянутыми над деревянным корпусом. 
+            Эта концепция была революционной, так как позволяла исполнителю контролировать динамику звука, в зависимости от силы нажатия клавиш.</p>
+        
+        <p>С течением времени пианино претерпело много изменений и усовершенствований. Оно стало неотъемлемой частью классической и современной музыки, 
+            вдохновляя композиторов, пианистов и музыкальных любителей по всему миру.</p>
+    
+        <p>Важный момент в истории пианино пришелся на XIX век, когда инструмент стал широко распространенным в семьях и концертных залах. 
+            Великие композиторы, такие как Людвиг ван Бетховен, Фредерик Шопен, Ян Сибелиус, использовали пианино для создания своих произведений.</p>
+            
+            <div class="vidos">
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/4khIPP--FDU?si=mdAzyX8Oe1YWQZoD" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+
+                <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/kjlu9RRHcbE?si=lLsN8co_-h9fghNi" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+            </div>
+        <p>Эволюция дизайна и технологии привела к созданию различных видов пианино, включая гранды, полу-гранды, вертикальные и цифровые. 
+            Каждый из них имеет свои уникальные характеристики и звучание, что позволяет музыкантам выбирать инструмент в соответствии 
+            с их предпочтениями и потребностями.</p>
+    
+        <p>Сегодня пианино остается популярным инструментом, воплощая в себе богатую историю и традиции музыкального искусства.</p>
+    </section>
+        <section>
+            <h2>Известные бренды пианино</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th scope="col">Компания</th>
+                        <th scope="col">Год основания</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Steinway & Sons</td>
+                        <td>1853</td>
+                    </tr>
+                    <tr>
+                        <td>Yamaha</td>
+                        <td>1887</td>
+                    </tr>
+                    <tr>
+                        <td>Kawai</td>
+                        <td>1927</td>
+                    </tr>
+                    <tr>
+                        <td>Bösendorfer</td>
+                        <td>1828</td>
+                    </tr>
+                    <tr>
+                        <td>Roland</td>
+                        <td>1972</td>
+                    </tr>
+                    <!-- Добавьте другие компании по вашему выбору -->
+                </tbody>
+            </table>
+        </section>
+    <footer>
+        &copy; Garage Bend 2023
+    </footer>
+    <script src="../JS/Hello.js"></script>
+    <script src="../JS/Slaider.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../JS/History.js"></script>
+</body>
+</body>
+
+</html>
