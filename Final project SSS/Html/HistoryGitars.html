@@ -81,7 +81,19 @@
 }
 
 
+section table {
+    margin: 0 auto; /* Центрирование таблицы по горизонтали */
+    width: 80%; /* Ширина таблицы */
+    border-collapse: collapse; /* Сворачивание границ таблицы */
+}
 
+th, td {
+    padding: 10px; /* Поля вокруг содержимого ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+}
+tbody tr:hover {
+    background-color: #ce7705; /* Цвет фона при наведении на строку */
+}
 
     </style>
    
@@ -221,6 +233,62 @@
             является предметом споров. Сотрудники Gibson того времени утверждают, что версия, 
             представленная Les Paul, была более или менее первой серийной моделью. 
             Лес, между тем, утверждал, что Гибсон дал ему последнее слово в каждой части дизайна.</p>
+    </div>
+
+    <section>
+        <h2>Гитарные компании</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Компания</th>
+                    <th>Год начала производства</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fender</td>
+                    <td>1946</td>
+                </tr>
+                <tr>
+                    <td>Gibson</td>
+                    <td>1902</td>
+                </tr>
+                <!-- Добавьте еще компаний по аналогии -->
+                <tr>
+                    <td>Ibanez</td>
+                    <td>1958</td>
+                </tr>
+                <tr>
+                    <td>Epiphone</td>
+                    <td>1873</td>
+                </tr>
+                <tr>
+                    <td>Jackson Guitars</td>
+                    <td>1978</td>
+                </tr>
+                <tr>
+                    <td>ESP Guitars</td>
+                    <td>1975</td>
+                </tr>
+                <tr>
+                    <td>Taylor Guitars </td>
+                    <td>1974</td>
+                </tr>
+                <tr>
+                    <td>Rickenbacker</td>
+                    <td>1931</td>
+                </tr>
+                <tr>
+                    <td>Music Man </td>
+                    <td>1974</td>
+                </tr>
+                <tr>
+                    <td>PRS Guitars </td>
+                    <td>1985</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     </div>
 
     <footer>
