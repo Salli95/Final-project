@@ -57,7 +57,6 @@
         </div>
     </header>
     
-   
     <nav class="navbar navbar-expand-lg navbar-dark  color" >
         <a class="navbar-brand">Electric guitar</a>
     
@@ -71,7 +70,7 @@
                     <input type="text" id="username" placeholder="Ваше имя">
                     <p>Password</p>
         
-                    <input type="password" id="password" />
+                    <input type="password" id="password"placeholder="Password" />
                     <button onclick="setWelcomeMessage()">Hi</button>
                     <button onclick="logout()">Выход</button>
                 </div>
@@ -97,13 +96,22 @@
                 <div id="historyModal" class="modal">
                     <div class="modal-content">
                         <span class="close" id="closeHistoryModalBtn">&times;</span>
+                        <div class="blok-MO">
                         <h2>История</h2>
-                        <ul>
+                        
                             <!-- Здесь будут ссылки на историю -->
-                            <li><a href="../Html/HistoryGitars.html">Электрогитары</a></li
-                            <li><a href="#">Ссылка 2</a></li>
-                            <li><a href="#">Ссылка 3</a></li>
-                        </ul>
+                             
+                                <li><a class="link"href="../Html/HistoryGitars.html">Электрогитары</a></li>
+                                <li><a class="link"href="./HistoryPiano.html">Пиано</a></li>
+                                <li><a class="link"href="./HistoryDram.html">Барабаны</a></li>
+                                
+                                <p>Здесь, в Garage Bend, вы откроете для себя захватывающий мир музыкальных инструментов и их истории.</p>
+                                <p>Пройдитесь по путешествию времени, чтобы узнать о том, как формировались и развивались звукоизвлекающие устройства.</p>
+                                <p>Исследуйте уникальные моменты в истории гитар, барабанов, клавишных и других инструментов, которые оставили свой след в мире музыки.</p>
+                                <p>Погружайтесь в увлекательные истории, представленные нашими экспертами и коллекцией увлекательных фактов.</p>
+                                <p>Настройтесь на музыкальную волну и наслаждайтесь путешествием!</p>
+                      
+                    </div>
                     </div>
                 </div>
                 <li class="nav-item active">
@@ -117,7 +125,7 @@
                     <a class="nav-link" href="./Piano.html">Клавишные</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Html/Accessorie.html">электроника</a>
+                    <a class="nav-link" href="../Html/Accessorie.html">Электроника</a>
                 </li>
 
                 <li class="nav-item">

@@ -42,6 +42,45 @@
   top: 5px;
   right: 15px;
 }
+.blok-MO {
+  text-align: center; /* Центрируем текст внутри блока */
+}
+@media only screen and (max-width: 500px) {
+  .blok-MO {
+    text-align: left;
+  }
+}
+
+.blok-MO h2 {
+  margin-bottom: 20px; /* Добавляем отступ снизу к заголовку */
+}
+
+.blok-MO ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем внутренний отступ списка */
+}
+
+.blok-MO li {
+  display: inline-block; /* Строковое расположение элементов списка */
+  margin: 0 10px; /* Добавляем горизонтальный отступ между элементами списка */
+}
+
+.blok-MO p {
+  margin-top: 20px; /* Добавляем отступ сверху к параграфам */
+}
+.link{
+ 
+  background-color: #a59805; /* Цвет фона */
+  color: #e6edf5; /* Цвет текста */
+  font: bold 0.8em Arial, Tahoma, sans-serif; /* Параметры шрифта */
+  border: 1px solid #d4dde5; /* Параметры рамки */
+  padding: 0.5rem 1.5rem; /* Расстояние от рамки до текста */
+  text-decoration: none; /* Убираем подчёркивание */
+  text-transform: uppercase; /* Все буквы большие */
+  border-radius: 20px; /* Радиус скругления рамки */
+  transition: 0.5s; /* Время перехода */
+  padding: 4px;
+}
 
 .close:hover,
 .close:focus {
