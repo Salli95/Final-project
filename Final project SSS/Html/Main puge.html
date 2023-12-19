@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <link rel="stylesheet" href="../CSS/navbar.css">
-    
+
     <link rel="stylesheet" href="../CSS/slaid.css">
     <link rel="stylesheet" href="../CSS/оглавление.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -14,21 +15,21 @@
     <link rel="stylesheet" href="../CSS/Mod win.css">
 
     <title>Garage Bend</title>
-    
+
 </head>
 
-<body >
+<body>
 
- 
+
     <header>
-    <div class="five">
-        <h1>Garage Bend</h1>
-    </div>
+        <div class="five">
+            <h1>Garage Bend</h1>
+        </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg navbar-dark  color" >
-        <a class="navbar-brand">Electric guitar</a>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark  color">
+        <a class="navbar-brand">Garage Bend</a>
+
         <button id="openModalBtn">Hello</button>
 
         <div id="myModal" class="modal">
@@ -38,27 +39,22 @@
                     <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
                     <input type="text" id="username" placeholder="Ваше имя">
                     <p>Password</p>
-        
-                    <input type="password" id="password"placeholder="Password" />
+
+                    <input type="password" id="password" placeholder="Password" />
                     <button onclick="setWelcomeMessage()">Hi</button>
                     <button onclick="logout()">Выход</button>
                 </div>
             </div>
         </div>
-       
-    <button class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarNav" 
-        aria-controls="navbarNav" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                
+
                 <button id="openHistoryModalBtn">History</button>
 
                 <!-- Модальное окно для истории -->
@@ -66,27 +62,31 @@
                     <div class="modal-content">
                         <span class="close" id="closeHistoryModalBtn">&times;</span>
                         <div class="blok-MO">
-                        <h2>История</h2>
-                        
+                            <h2>История</h2>
+
                             <!-- Здесь будут ссылки на историю -->
-                             
-                                <li><a class="link"href="../Html/HistoryGitars.html">Электрогитары</a></li>
-                                <li><a class="link"href="./HistoryPiano.html">Пиано</a></li>
-                                <li><a class="link"href="./HistoryDram.html">Барабаны</a></li>
-                                
-                                <p>Здесь, в Garage Bend, вы откроете для себя захватывающий мир музыкальных инструментов и их истории.</p>
-                                <p>Пройдитесь по путешествию времени, чтобы узнать о том, как формировались и развивались звукоизвлекающие устройства.</p>
-                                <p>Исследуйте уникальные моменты в истории гитар, барабанов, клавишных и других инструментов, которые оставили свой след в мире музыки.</p>
-                                <p>Погружайтесь в увлекательные истории, представленные нашими экспертами и коллекцией увлекательных фактов.</p>
-                                <p>Настройтесь на музыкальную волну и наслаждайтесь путешествием!</p>
-                      
-                    </div>
+
+                            <li><a class="link" href="../Html/HistoryGitars.html">Электрогитары</a></li>
+                            <li><a class="link" href="./HistoryPiano.html">Пиано</a></li>
+                            <li><a class="link" href="./HistoryDram.html">Барабаны</a></li>
+
+                            <p>Здесь, в Garage Bend, вы откроете для себя захватывающий мир музыкальных инструментов и
+                                их истории.</p>
+                            <p>Пройдитесь по путешествию времени, чтобы узнать о том, как формировались и развивались
+                                звукоизвлекающие устройства.</p>
+                            <p>Исследуйте уникальные моменты в истории гитар, барабанов, клавишных и других
+                                инструментов, которые оставили свой след в мире музыки.</p>
+                            <p>Погружайтесь в увлекательные истории, представленные нашими экспертами и коллекцией
+                                увлекательных фактов.</p>
+                            <p>Настройтесь на музыкальную волну и наслаждайтесь путешествием!</p>
+
+                        </div>
                     </div>
                 </div>
                 <li class="nav-item active">
                     <a class="nav-link" href="../Html/Main puge.html">Главная</a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
                 </li>
@@ -100,12 +100,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../Html/Basket.html">Basket</a>
                 </li>
-                
-                
+
+
             </ul>
         </div>
     </nav>
-   
+
 
 
 
@@ -121,19 +121,27 @@
             <img src="../Медиа/слайдер/2.jpg" alt="Slide 3">
         </div>
     </div>
- 
-   
-    <h4>Добро пожаловать в "Garage Bend" – вашу музыкальную столицу, где страсть к звуку сочетается с бесконечным миром музыкальных возможностей. Мы создали этот магазин для тех, кто разделяет наше безграничное восхищение музыкой и жаждет качественных инструментов для ее творчества.</P>
 
-    <p>    Наши полки наполнены вибрирующими нотами гитар, заводными ритмами ударных, нежными звуками клавиш, и всем тем, что придаст вашему музыкальному искусству силу, глубину и неповторимость. Вне зависимости от того, вы начинающий музыкант или опытный артист, "Garage Bend" - это место, где ваше творчество обретет новые грани.</P>
-    
-    <P>    Выбирайте из нашего разнообразного ассортимента, наслаждайтесь скидками на лучшие бренды и доверьтесь нашей команде профессионалов, готовых поддержать вас на каждом этапе вашего музыкального путешествия. Давайте создадим вместе мелодии, которые будут звучать в сердцах слушателей!
-    
-    "Garage Bend" - где начинается ваше музыкальное приключение. Добро пожаловать в мир звуков, вдохновения и творчества!
-</h4>
-    
+
+    <h4>Добро пожаловать в "Garage Bend" – вашу музыкальную столицу, где страсть к звуку сочетается с бесконечным миром
+        музыкальных возможностей. Мы создали этот магазин для тех, кто разделяет наше безграничное восхищение музыкой и
+        жаждет качественных инструментов для ее творчества.</P>
+
+        <p> Наши полки наполнены вибрирующими нотами гитар, заводными ритмами ударных, нежными звуками клавиш, и всем
+            тем, что придаст вашему музыкальному искусству силу, глубину и неповторимость. Вне зависимости от того, вы
+            начинающий музыкант или опытный артист, "Garage Bend" - это место, где ваше творчество обретет новые грани.
+        </P>
+
+        <P> Выбирайте из нашего разнообразного ассортимента, наслаждайтесь скидками на лучшие бренды и доверьтесь нашей
+            команде профессионалов, готовых поддержать вас на каждом этапе вашего музыкального путешествия. Давайте
+            создадим вместе мелодии, которые будут звучать в сердцах слушателей!
+
+            "Garage Bend" - где начинается ваше музыкальное приключение. Добро пожаловать в мир звуков, вдохновения и
+            творчества!
+    </h4>
+
     <footer>
-        &copy; Garage Bend  2023 
+        &copy; Garage Bend 2023
     </footer>
     <script src="../JS/Hello.js"></script>
     <script src="../JS/Slaider.js"></script>
@@ -142,4 +150,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="../JS/History.js"></script>
 </body>
+
 </html>

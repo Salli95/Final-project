@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <style>
-       
         .container {
             background-color: #494444;
             padding: 20px;
@@ -38,6 +38,10 @@
             font-weight: bold;
             color: #e44d26;
         }
+
+        .otst {
+            margin-left: 20px
+        }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../CSS/карточка.css">
@@ -46,9 +50,10 @@
     <link rel="stylesheet" type="text/css" href="../CSS/Mod win.css">
     <link rel="stylesheet" type="text/css" href="../CSS/footer.css">
     <link rel="stylesheet" type="text/css" href="../CSS/navbar.css">
-    
-   
+
+
 </head>
+
 <body>
 
     <header>
@@ -56,10 +61,10 @@
             <h1>Garage Bend</h1>
         </div>
     </header>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark  color" >
-        <a class="navbar-brand">Electric guitar</a>
-    
+
+    <nav class="navbar navbar-expand-lg navbar-dark  color">
+        <a class="navbar-brand">Garage Bend</a>
+
         <button id="openModalBtn">Hello</button>
 
         <div id="myModal" class="modal">
@@ -69,27 +74,22 @@
                     <p>Добро пожаловать! Пожалуйста, введите ваше имя:</p>
                     <input type="text" id="username" placeholder="Ваше имя">
                     <p>Password</p>
-        
-                    <input type="password" id="password"placeholder="Password" />
+
+                    <input type="password" id="password" placeholder="Password" />
                     <button onclick="setWelcomeMessage()">Hi</button>
                     <button onclick="logout()">Выход</button>
                 </div>
             </div>
         </div>
-       
-    <button class="navbar-toggler" 
-        type="button" 
-        data-toggle="collapse" 
-        data-target="#navbarNav" 
-        aria-controls="navbarNav" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                
+
                 <button id="openHistoryModalBtn">History</button>
 
                 <!-- Модальное окно для истории -->
@@ -97,27 +97,31 @@
                     <div class="modal-content">
                         <span class="close" id="closeHistoryModalBtn">&times;</span>
                         <div class="blok-MO">
-                        <h2>История</h2>
-                        
+                            <h2>История</h2>
+
                             <!-- Здесь будут ссылки на историю -->
-                             
-                                <li><a class="link"href="../Html/HistoryGitars.html">Электрогитары</a></li>
-                                <li><a class="link"href="./HistoryPiano.html">Пиано</a></li>
-                                <li><a class="link"href="./HistoryDram.html">Барабаны</a></li>
-                                
-                                <p>Здесь, в Garage Bend, вы откроете для себя захватывающий мир музыкальных инструментов и их истории.</p>
-                                <p>Пройдитесь по путешествию времени, чтобы узнать о том, как формировались и развивались звукоизвлекающие устройства.</p>
-                                <p>Исследуйте уникальные моменты в истории гитар, барабанов, клавишных и других инструментов, которые оставили свой след в мире музыки.</p>
-                                <p>Погружайтесь в увлекательные истории, представленные нашими экспертами и коллекцией увлекательных фактов.</p>
-                                <p>Настройтесь на музыкальную волну и наслаждайтесь путешествием!</p>
-                      
-                    </div>
+
+                            <li><a class="link" href="../Html/HistoryGitars.html">Электрогитары</a></li>
+                            <li><a class="link" href="./HistoryPiano.html">Пиано</a></li>
+                            <li><a class="link" href="./HistoryDram.html">Барабаны</a></li>
+
+                            <p>Здесь, в Garage Bend, вы откроете для себя захватывающий мир музыкальных инструментов и
+                                их истории.</p>
+                            <p>Пройдитесь по путешествию времени, чтобы узнать о том, как формировались и развивались
+                                звукоизвлекающие устройства.</p>
+                            <p>Исследуйте уникальные моменты в истории гитар, барабанов, клавишных и других
+                                инструментов, которые оставили свой след в мире музыки.</p>
+                            <p>Погружайтесь в увлекательные истории, представленные нашими экспертами и коллекцией
+                                увлекательных фактов.</p>
+                            <p>Настройтесь на музыкальную волну и наслаждайтесь путешествием!</p>
+
+                        </div>
                     </div>
                 </div>
                 <li class="nav-item active">
                     <a class="nav-link" href="../Html/Main puge.html">Главная</a>
                 </li>
-                
+
                 <li class="nav-item">
                     <a class="nav-link" href="../Html/Guitar.html">Гитары</a>
                 </li>
@@ -131,81 +135,79 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../Html/Basket.html">Basket</a>
                 </li>
-                
-                
+
+
             </ul>
         </div>
     </nav>
-   
 
-    <button 
-    style="
+
+    <button style="
     margin-top: 10px; 
     margin-bottom: 10px; 
     display: block; 
     margin-left: auto; 
-    margin-right: auto;" 
-    id="clearCartBtn" 
-    class="btn btn-danger">
-    Очистить корзину</button>
+    margin-right: auto;" id="clearCartBtn" class="btn btn-danger">
+        Очистить корзину</button>
 
-<div class="container">
-    <h1>Shopping Cart</h1>
+    <div class="container">
+        <h1>Shopping Cart</h1>
 
-    <ul id="cartItems"></ul>
+        <ul class="otst" id="cartItems"></ul>
 
-    <div id="cartTotal" class="text-right font-weight-bold mt-4">Total: $0.00</div>
-</div>
+        <div id="cartTotal" class="text-right font-weight-bold mt-4">Total: $0.00</div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="../JS/Hello.js"></script>
-<script src="../JS/History.js"></script>
-<script>
-     // Получаем корзину из localStorage
-     const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="../JS/Hello.js"></script>
+    <script src="../JS/History.js"></script>
+    <script>
+        // Получаем корзину из localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-     // Находим элементы для отображения корзины
-     const cartItemsElement = document.getElementById('cartItems');
-     const cartTotalElement = document.getElementById('cartTotal');
- 
-     // Обновляем отображение корзины
-     function updateCartDisplay() {
-         // Вычисляем общую стоимость товаров в корзине
-         const total = cart.reduce((acc, item) => acc + item.price, 0);
- 
-         // Обновляем текст в элементах
-         cartTotalElement.textContent = `Общая стоимость: $${total.toFixed(2)}`;
- 
-         // Очищаем отображение товаров в корзине
-         cartItemsElement.innerHTML = '';
- 
-         // Обновляем отображение каждого товара в корзине
-         cart.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
-            cartItemsElement.appendChild(li);
-         });
-     }
- 
-     // Обновляем отображение корзины при загрузке страницы
-     updateCartDisplay();
+        // Находим элементы для отображения корзины
+        const cartItemsElement = document.getElementById('cartItems');
+        const cartTotalElement = document.getElementById('cartTotal');
 
-      // Добавляем обработчик клика на кнопку "Очистить корзину"
-    const clearCartBtn = document.getElementById('clearCartBtn');
-    if (clearCartBtn) {
-        clearCartBtn.addEventListener('click', function () {
-            // Очищаем корзину в localStorage
-            localStorage.removeItem('cart');
+        // Обновляем отображение корзины
+        function updateCartDisplay() {
+            // Вычисляем общую стоимость товаров в корзине
+            const total = cart.reduce((acc, item) => acc + item.price, 0);
 
-            // Очищаем массив корзины
-            cart.length = 0;
+            // Обновляем текст в элементах
+            cartTotalElement.textContent = `Общая стоимость: $${total.toFixed(2)}`;
 
-            // Обновляем отображение корзины
-            updateCartDisplay();
-        });
-    }
-</script>
+            // Очищаем отображение товаров в корзине
+            cartItemsElement.innerHTML = '';
+
+            // Обновляем отображение каждого товара в корзине
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItemsElement.appendChild(li);
+            });
+        }
+
+        // Обновляем отображение корзины при загрузке страницы
+        updateCartDisplay();
+
+        // Добавляем обработчик клика на кнопку "Очистить корзину"
+        const clearCartBtn = document.getElementById('clearCartBtn');
+        if (clearCartBtn) {
+            clearCartBtn.addEventListener('click', function () {
+                // Очищаем корзину в localStorage
+                localStorage.removeItem('cart');
+
+                // Очищаем массив корзины
+                cart.length = 0;
+
+                // Обновляем отображение корзины
+                updateCartDisplay();
+            });
+        }
+    </script>
 </body>
+
 </html>
